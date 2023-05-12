@@ -2,36 +2,36 @@ import React from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { ImPlus } from "react-icons/im";
 import { FiEdit } from "react-icons/fi";
+import Search from "./components/SearchBox";
 
-const Nav = ({ handleDeleteNote, selectedNoteId }) => {
+const Nav = ({
+  handleDeleteNote,
+  selectedNoteId,
+  searchText,
+  handleSearchTextChange,
+  handleAddNote,
+}) => {
   return (
     <nav className="nav">
       <div className="edit__box">
-        <button className="icon__box">
+        <button className="icon__box" onClick={handleAddNote}>
           <ImPlus className="icon" />
         </button>
-       
-          <button className="icon__box">
-            <MdDeleteForever
-              className="icon"
-              onClick={() => handleDeleteNote(selectedNoteId)}
-            />
-          </button>
-          <button className="icon__box">
-            <FiEdit className="icon" />
-          </button>
-   
-    
+
+        <button
+          className="icon__box"
+          onClick={() => handleDeleteNote(selectedNoteId)}
+        >
+          <MdDeleteForever className="icon" />
+        </button>
+        <button className="icon__box">
+          <FiEdit className="icon" />
+        </button>
       </div>
-      <div className="search__box">
-        <input
-          className="search__box__icon"
-          type="text"
-          //   value={searchText}
-          //   onChange={handleSearchTextChange}
-          placeholder="Search"
-        />
-      </div>
+      <Search
+        searchText={searchText}
+        handleSearchTextChange={handleSearchTextChange}
+      />
     </nav>
   );
 };
