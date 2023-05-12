@@ -46,6 +46,7 @@ const AddNote = ({  }) => {
         rows="5"
         placeholder="Type...."
         value={noteText}
+        
         onChange={handleNoteChange}
       ></textarea>
      

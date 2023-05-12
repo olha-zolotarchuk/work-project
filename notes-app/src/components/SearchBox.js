@@ -6,6 +6,7 @@ const Search = ({ searchText, handleSearchTextChange }) => {
       <input
         className="search__box__icon"
         type="text"
+        
         value={searchText}
         onChange={handleSearchTextChange}
         placeholder="Search notes"
