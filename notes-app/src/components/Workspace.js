@@ -1,8 +1,33 @@
-import React from "react";
-import AddNote from "./AddNote";
+import React, { useState, useEffect } from "react";
+import { saveNote } from "../components/indexeddb";
 
-const Workspace = ({ selectedNote = {}, handleDeleteNote, handleAddNote }) => {
-  // console.log("Selected note:", selectedNote);
+const Workspace = ({ selectedNote = {}, handleDeleteNote }) => {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    setTitle(selectedNote?.title || "");
+    console.log("title", selectedNote);
+    setContent(selectedNote?.content || "");
+  }, [selectedNote]);
+
+  const handleTitleChange = (event) => {
+    setTitle(event.target.value);
+
+    if (selectedNote) {
+      const updatedNote = { ...selectedNote, title: event.target.value };
+      saveNote(updatedNote);
+    }
+  };
+
+  const handleContentChange = (event) => {
+    setContent(event.target.value);
+    if (selectedNote) {
+      const updatedNote = { ...selectedNote, content: event.target.value };
+      saveNote(updatedNote);
+    }
+  };
+
   const handleDelete = () => {
     const shouldDelete = window.confirm(
       "Are you sure you want to delete this note?"
@@ -10,26 +35,31 @@ const Workspace = ({ selectedNote = {}, handleDeleteNote, handleAddNote }) => {
     if (shouldDelete) {
       handleDeleteNote(selectedNote.id);
     }
-
-    //  console.log(selectedNote.id);
   };
 
   return (
     <div className="workspace">
       {selectedNote ? (
         <div>
-          <textarea placeholder="Start typing"></textarea>
-          <h2>{selectedNote.title}</h2>
-          <p>{selectedNote.content}</p>
+          <textarea
+            className="title"
+            placeholder="Title"
+            value={title}
+            onChange={handleTitleChange}
+          />
+          <textarea
+            className="content"
+            placeholder="Start typing here..."
+            value={content}
+            onChange={handleContentChange}
+          />
           <button className="delete__button" onClick={handleDelete}>
             Delete
           </button>
         </div>
       ) : (
-        // <p>Please select a note to view its content.</p>
-          <AddNote/>
-      )}{" "}
-      <button className="add__button" onClick={handleAddNote}></button>
+        <p>Please select a note to view its content.</p>
+      )}
     </div>
   );
 };

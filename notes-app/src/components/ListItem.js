@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const ListItem = ({ note, isSelected, onSelectNote, handleDeleteNote }) => {
   const handleClick = () => {
     onSelectNote(note);

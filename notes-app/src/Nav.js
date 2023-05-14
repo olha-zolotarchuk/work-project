@@ -14,6 +14,8 @@ const Nav = ({
   return (
     <nav className="nav">
       <div className="edit__box">
+  
+
         <button className="icon__box" onClick={handleAddNote}>
           <ImPlus className="icon" />
         </button>
