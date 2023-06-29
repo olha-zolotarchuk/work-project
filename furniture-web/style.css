@@ -1,0 +1,371 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+button,
+input {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  color: #555;
+}
+/* =================================== */
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
+/* =================================== */
+[class*="__container"] {
+  max-width: 1410px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+/* =================================== */
+.main__container {
+  flex: 1 1 auto;
+}
+/* =================================== */
+.header__page {
+  background: #7ac751;
+}
+.header__container {
+}
+.header__top {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.header__right {
+  padding: 16px 0px;
+}
+.header__left {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.header__lang {
+  display: flex;
+  gap: 8px;
+}
+.lang-header {
+}
+.lang-header__name {
+}
+.lang-header__select {
+  display: flex;
+  max-width: 100%;
+}
+.lang-header__select:hover {
+}
+.lang-header__img {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.lang-header__img:hover {
+  transform: rotate(180deg);
+}
+.header__login {
+}
+.header__login:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 991.98px) {
+  .header__container {
+    flex-direction: column;
+    height: auto;
+  }
+  .header__left {
+    padding-bottom: 16px;
+  }
+}
+
+.header__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+.header__logo {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.logo {
+}
+.logo__img {
+  max-width: 100%;
+}
+.logo__name {
+}
+.header__search {
+}
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search__input {
+  border-radius: 8px;
+  border: 2px solid #7ac751;
+  width: 582px;
+  height: 46px;
+  font-size: 14px;
+  color: #b0b0b0;
+  padding-left: 25px;
+  /* position: relative; */
+}
+.search__menu {
+  position: absolute;
+  /* right: 600px; */
+  right: 0;
+  display: flex;
+  border-left: 1.5px solid rgba(227, 227, 227, 0.78);
+}
+.search__categories {
+  display: flex;
+  align-items: center;
+}
+.search__categories__name {
+  font-size: 14px;
+  padding: 0px 13px;
+}
+.search__categories__select {
+  display: flex;
+  max-width: 100%;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+.search__categories__select:hover {
+  transform: rotate(180deg);
+}
+.search__icon {
+  border-radius: 0px 7px 6px 0px;
+  background: #7ac751;
+  width: 55px;
+  height: 43px;
+  margin-left: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search__icon:hover {
+  background: hsla(99, 51%, 55%, 0.692);
+}
+.header__account {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+.account {
+}
+.account__shop {
+  display: flex;
+  position: relative;
+}
+.account__count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  color: #fff;
+  font-size: 7px;
+  border-radius: 50%;
+  background: #7ac751;
+  position: absolute;
+  top: 0;
+  right: -8px;
+}
+.account__notification {
+}
+.account__user {
+}
+@media (max-width: 991.98px) {
+  .header__bottom {
+    flex-direction: column;
+  }
+}
+
+/* ======================== */
+.home__header {
+  background: #f7f8fa;
+}
+
+.home__container {
+  display: flex;
+  gap: 82px;
+  /* height: 67px; */
+}
+.home__all {
+  background: #7ac751;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 25px 40px 25px 30px;
+}
+.home__all p {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+.home__menu {
+  display: flex;
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+.menu__item {
+  text-transform: uppercase;
+  font-size: 14px;
+  opacity: 0.8;
+}
+/* === */
+.home__categories__container {
+  display: flex;
+  gap: 11px;
+}
+.categories-home__list {
+  background: #f7f8fa;
+}
+
+.categories-home__items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.categories-home__items:not(:last-child) {
+  border-bottom: 2px solid #f80000;
+}
+.categories-home_item {
+  font-size: 14px;
+  letter-spacing: 0.28px;
+}
+.home__top {
+  flex: 1 1 auto;
+  display: flex;
+  border-radius: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(241, 250, 255, 0.88) 0%,
+    #f1faff 100%
+  );
+  backdrop-filter: blur(77.5px);
+}
+.top__text {
+  flex: 1 1 auto;
+}
+.top__text_1 {
+  color: var(--main-color, #7ac751);
+  font-size: 22px;
+  line-height: 1.18; /* 26/22 */
+  letter-spacing: 1.1px;
+}
+.top__text_1:not(:last-child) {
+  margin-bottom: 6px;
+}
+.top__text_2 {
+  color: #2f2f2f;
+  font-size: 40px;
+  font-weight: 500;
+}
+.top__text_2:not(:last-child) {
+  margin-bottom: 29px;
+}
+.top__text_2_underline {
+  position: relative;
+}
+.top__text_2_underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 6px;
+  background: url("img/main/home/Screenshot from 2023-06-29 22-22-21.png");
+  background-size: auto 100%;
+}
+.top__text_3 {
+  color: rgba(81, 81, 81, 0.71);
+  font-size: 27px;
+  font-family: Mulish;
+  font-weight: 600;
+  line-height: 0.96; /* 26/27 */
+}
+.top__text_3:not(:last-child) {
+  margin-bottom: 35px;
+}
+.top__text__btn {
+  color: #fff;
+  font-size: 16px;
+  font-family: Mulish;
+  font-weight: 700;
+  border-radius: 8%;
+  background: #7ac751;
+  padding: 10px 18px;
+  transition: all 0.3s ease 0s;
+}
+.top__big {
+}
+.top__litle {
+}
+.top__litle__img {
+}
+.top__litle__prise {
+}
+.top__litle__name {
+}
