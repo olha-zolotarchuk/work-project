@@ -241,7 +241,12 @@ body {
 .home__header {
   background: #f7f8fa;
 }
+@media (max-width: 567.98px) {
+  .categories-home__list {
+    display: none;
+  }
 
+}
 .home__container {
   display: flex;
   gap: 82px;
