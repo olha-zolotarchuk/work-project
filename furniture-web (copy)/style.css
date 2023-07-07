@@ -256,7 +256,6 @@ body {
 .home__header {
   /* background: #f7f8fa; */
 }
-
 .home__container {
   display: flex;
   gap: 11px;
@@ -319,7 +318,6 @@ body {
   .categories-home__list {
     display: none;
   }
-
 }
 
 .categories-home__items {
@@ -349,10 +347,9 @@ body {
   margin-top: 12px;
 }
 @media (max-width: 567.98px) {
-  
   .home__top {
-      flex: 1 1 100%;
-      width: 100%;
+    flex: 1 1 100%;
+    width: 100%;
   }
 }
 .top__text {
