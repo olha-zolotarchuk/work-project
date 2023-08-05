@@ -555,6 +555,8 @@ body {
 .footer__bottom {
   display: flex;
   padding-bottom: 6.5rem;
+  padding-top: 3.5rem;
+  justify-content: space-between;
 }
 .bottom__text {
   color: #c0c0c0;
@@ -564,8 +566,38 @@ body {
 .text-main {
 }
 .main-footer__social {
+  display: flex;
+  gap: 1.25rem;
 }
 .social__link {
 }
 .social__hover {
+}
+.footer__center {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap : 1rem;
+  justify-content: space-between;
+  padding: 2.25rem 0rem;
+}
+.center__text {
+}
+.center__tittle {
+}
+.center__descrip {
+  color: #c0c0c0;
+  font-size: 0.8125rem;
+  line-height: 1.53;
+}
+
+.fotter__input__email {
+  height: 40px;
+  padding-right: 40px;
+  padding-left: 0.38rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  background-image: url("img/footer/Rectangle.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.38rem) center;
 }
