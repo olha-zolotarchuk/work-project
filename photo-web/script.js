@@ -7,8 +7,6 @@ function documentClick(e) {
   }
 }
 
-
-
 // document.querySelector(".icon-menu").addEventListener("click", function () {
 //   // Toggle the "menu-open" class on the documentElement
 //   document.documentElement.classList.toggle("menu-open");
@@ -17,7 +15,6 @@ function documentClick(e) {
 //   document.getElementById("home").classList.toggle("hidden");
 // });
 
-
 function toggleSectionVisibility(sectionId) {
   var section = document.getElementById(sectionId);
   section.classList.toggle("hidden");
@@ -25,7 +22,6 @@ function toggleSectionVisibility(sectionId) {
 
 var menuIcon = document.querySelector(".icon-menu");
 menuIcon.addEventListener("click", function () {
-  toggleSectionVisibility("home"); 
-  toggleSectionVisibility("work");
-   toggleSectionVisibility("use");
+  toggleSectionVisibility("main");
+  toggleSectionVisibility("footer");
 });
